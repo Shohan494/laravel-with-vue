@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/{any}', function () {
   return view('post');
 })->where('any', '.*');
+
+Route::get('post','PostController@index');
