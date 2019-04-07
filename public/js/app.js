@@ -1847,7 +1847,7 @@ __webpack_require__.r(__webpack_exports__);
     addPost: function addPost() {
       var _this = this;
 
-      var uri = 'http://vuelaravelcrud.test/api/post/create';
+      var uri = 'http://localhost:8000/api/post/create';
       this.axios.post(uri, this.post).then(function (response) {
         _this.$router.push({
           name: 'posts'
@@ -1906,7 +1906,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    var uri = "http://vuelaravelcrud.test/api/post/edit/".concat(this.$route.params.id);
+    var uri = "http://localhost:8000/api/post/edit/".concat(this.$route.params.id);
     this.axios.get(uri).then(function (response) {
       _this.post = response.data;
     });
@@ -1915,7 +1915,7 @@ __webpack_require__.r(__webpack_exports__);
     updatePost: function updatePost() {
       var _this2 = this;
 
-      var uri = "http://vuelaravelcrud.test/api/post/update/".concat(this.$route.params.id);
+      var uri = "http://localhost:8000/api/post/update/".concat(this.$route.params.id);
       this.axios.post(uri, this.post).then(function (response) {
         _this2.$router.push({
           name: 'posts'
@@ -2012,7 +2012,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    var uri = 'http://vuelaravelcrud.test/api/posts';
+    var uri = 'http://localhost:8000/api/posts';
     this.axios.get(uri).then(function (response) {
       _this.posts = response.data.data;
     });
@@ -2021,7 +2021,7 @@ __webpack_require__.r(__webpack_exports__);
     deletePost: function deletePost(id) {
       var _this2 = this;
 
-      var uri = "http://vuelaravelcrud.test/api/post/delete/".concat(id);
+      var uri = "http://localhost:8000/api/post/delete/".concat(id);
       this.axios["delete"](uri).then(function (response) {
         _this2.posts.splice(_this2.posts.indexOf(id), 1);
       });
